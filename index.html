@@ -13,6 +13,1153 @@
       rel="stylesheet"
     />
 
+    <title>Le Van Tan - CV</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+
+    <style>
+      body::-webkit-scrollbar {
+          width: 7px;
+          height: 7px;
+          /* background-color: #181828; */
+          background-color: #FEB249;
+          }
+  
+      body::-webkit-scrollbar-track {
+              background-color: #eeeeee;
+              border-radius: 5px;
+          }
+  
+      body::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              /* background-color: #242526; */
+              background-color: #FEB249;
+          }
+      </style>
+
+    <style>
+      #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 1000px;
+  height: 680px;
+  border-radius: 8px;
+}
+
+/* Caption of Modal Image */
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #FEB249;
+  font-size: 20px;
+  padding: 10px 0;
+  height: 50px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 70px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #FEB249;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.my-projects {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center;
+}
+
+.project-item {
+  position: relative;
+  width: 400px;
+  height: 800px;
+  background-color: white;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  align-items: center;
+}
+
+.project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: yellow;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.project-image img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+.project-description {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: -20%;
+  left: 0px;
+  background-color: #eeeeeee0;
+  z-index: 20;
+  transition: all 0.3s cubic-bezier(0.38, 0.24, 0.28, 1.17);
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: nowrap; 
+  justify-content: flex-start; 
+  align-items: center; 
+  align-content: center; 
+}
+
+.art-text {
+  padding: 20px 0px 20px 0px;
+  font-weight: bold;
+  color: coral;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.project-link {
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #FEB249;
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: nowrap; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center; 
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s cubic-bezier(0.38, 0.24, 0.28, 1.17);
+}
+.project-link:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transform: translateY(-2px);
+}
+.project-link:active {
+  transform: translateY(2px);
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.1);
+}
+.project-item:hover .project-description {
+  bottom: 0%;
+}
+.work-timeline {
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
+/* Work timeline */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container-left, .container-right {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  transition: all 0.1s cubic-bezier(0.38, 0.24, 0.28, 1.17);
+}
+
+/* The circles on the timeline */
+.container-left::after, .container-right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.container-left {
+  left: 0;
+  padding: 10px 40px 10px 0px;
+}
+
+/* Place the container to the right */
+.container-right {
+  left: 50%;
+  padding: 10px 0px 10px 40px;
+}
+
+.container-left:hover .sub-content-left {
+  border-top: 2px solid #FEB249;
+  border-right: 2px solid #FEB249;
+  border-bottom: 2px solid #FEB249;
+}
+
+.container-right:hover .sub-content-right {
+  border-top: 2px solid #FEB249;
+  border-left: 2px solid #FEB249;
+  border-bottom: 2px solid #FEB249;
+}
+
+/* Add arrows to the left container (pointing right) */
+.container-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.container-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.container-right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+}
+.content p {
+  color: black;
+}
+
+.sub-content-left {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  height: 60%;
+  left: 110%;
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  justify-content: flex-start; 
+  align-items: center; 
+}
+
+.sub-content-right {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  height: 60%;
+  padding-left: 30px;
+  right: 110%;
+  border-top: 2px solid grey;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  justify-content: flex-start; 
+  align-items: center; 
+}
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <!-- <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a> -->
+              <!--<a href="#"><img src="https://live.staticflickr.com/65535/52271917584_7f1fd0d761_c.jpg" alt="" /></a>-->
+	      <a href="#"><img src="https://live.staticflickr.com/65535/54508075432_00721a83b4_m.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>LE VAN TAN</h4>
+              <span>Game Developer</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+
+                <li><a href="#section1">Information</a></li>
+                <li><a href="#section2">Skills</a></li>
+                <li><a href="#section3">Projects</a></li>
+                <li><a href="#section4">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+
+                  <a target="blank" href="#"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <!-- <p>Copyright 2019 Reflux Design</p> -->
+              <p>Copyright 2021 By VanTan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Information</h2>
+            <div class="line-dec"></div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="https://live.staticflickr.com/65535/51625882624_4f7131601f_b.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Personal Information</h4>
+                    <p>Full Name: <b>LE VAN TAN </b></p>
+                    <p>Gender: <b>Male </b></p>
+                    <p>Date of Birth: <b>August 15, 1998 </b></p>
+                    <p>Hometown: <b>Khanh Hoa, Viet Nam</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="section-heading">
+                  <div class="text-header">
+                    <h2>Work Experience</h2>
+                    <div class="line-dec"></div>
+                  </div>
+                </div>
+                <div class="work-timeline">
+                  <div class="timeline">
+		    <div class="container-left">
+                      <div class="content">
+                        <h2>2020 - 2023</h2>
+                        <div class="company-image">
+                          <img src="https://lampart-vn.com/images/og_200x200.png" alt="" />
+                        </div>
+                        <h2 class="art-text" style="padding-bottom: 0px;">LAMPART</h2>
+                      </div>
+                      <div class="sub-content-left">
+                        <div>
+                          <h2 class="art-text" style="padding-bottom: 0px;">Lampart</h2>
+                          <p>Company Name: <b>Lampart</b></p>
+                          <p>Years of Experience: <b>3 years</b></p>
+                          <p>Job Responsibilities: <b>Web and Mobile developer</b></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-right">
+                      <div class="content">
+                        <h2>2023 - 2024</h2>
+                        <div class="company-image">
+                          <img src="https://www.manifera.com/wp-content/uploads/2020/12/Manifera-Software-Outsourcing-logo.png" alt="" />
+                        </div>
+                        <h2 class="art-text" style="padding-bottom: 0px;">MANIFERA</h2>
+                      </div>
+                      <div class="sub-content-right">
+                        <div>
+                          <h2 class="art-text" style="padding-bottom: 0px;">Manifera</h2>
+                          <p>Company Name: <b>Manifera</b></p>
+                          <p>Years of Experience: <b>1 year</b></p>
+                          <p>Job Responsibilities: <b>Web and Mobile developer</b></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-left">
+                      <div class="content">
+                        <h2>2024 - 2025</h2>
+                        <div class="company-image">
+                          <img src="https://cdn.prod.website-files.com/600801ab2d5efc5ea0a393d9/63bbd1f41e37ba7d817a8423_FlutFlame.png" alt="" />
+                        </div>
+                        <h2 style="text-align: center;">&</h2>
+                        <div class="company-image">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/2509px-Unreal_Engine_Logo.svg.png" alt="" />
+                        </div>
+                        <h2 class="art-text" style="padding-bottom: 0px;">Work at home</h2>
+                      </div>
+                      <div class="sub-content-left">
+                        <div>
+                          <h2 class="art-text" style="padding-bottom: 0px;"></h2>
+                          <p>Company Name: <b>Work at home</b></p>
+                          <p>Years of Experience: <b>1 year</b></p>
+                          <p>Job Responsibilities: <b>Game Developer</b></p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="left-text">
+                  <p style="line-height: 30px;">
+                  
+                    I started my career as a web developer, working over 4 years with PHP, Laravel, and Vue.js before moving into mobile development with Flutter. Along the way, I built strong skills in software architecture, cross-platform development, and user experience.
+                    
+                  </p>
+
+                  
+
+                  <p style="line-height: 30px;">
+                     
+                    From this foundation, I discovered my passion for game development. Using Flutter with the Flame engine, I created a combat game, which helped me grow in gameplay design, performance optimization, and player experience.
+                    
+                  </p>
+
+                  
+
+                  <p style="line-height: 30px;">
+                    
+                    Now, I’m learning Unreal Engine 5 to take my skills further and build a long-term career in cross-platform game development. With my combined background in web, mobile, and game development, I’m eager to contribute to creating innovative and immersive gaming experiences.
+                    
+                  </p>
+
+              
+
+<!-- Tôi bắt đầu sự nghiệp của mình với vai trò là một lập trình viên web, làm việc hơn 4 năm với PHP, Laravel và Vue.js trước khi chuyển sang phát triển ứng dụng di động với Flutter. Trong quá trình đó, tôi đã xây dựng được nền tảng vững chắc về kiến trúc phần mềm, phát triển đa nền tảng và tối ưu trải nghiệm người dùng.
+
+Từ nền tảng này, tôi khám phá ra niềm đam mê dành cho phát triển game. Sử dụng Flutter cùng Flame engine, tôi đã tạo ra một game chiến đấu, qua đó rèn luyện thêm kỹ năng thiết kế gameplay, tối ưu hiệu năng và nâng cao trải nghiệm người chơi.
+
+Hiện tại, tôi đang học Unreal Engine 5 để tiếp tục nâng cao kỹ năng và hướng đến sự nghiệp lâu dài trong lĩnh vực phát triển game đa nền tảng. Với nền tảng kết hợp giữa phát triển web, mobile và game, tôi mong muốn được đóng góp vào việc tạo ra những trải nghiệm game sáng tạo, chất lượng cao và cuốn hút. -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section my-services" style="display: none;" data-section="section2">
+        <div class="container">
+          <div style="text-align: left;" class="section-heading">
+            <div class="text-header" style="padding-bottom: 40px;">
+              <h2 style="text-align: center">Skills</h2>
+              <div class="line-dec"></div>
+            </div>
+            <h4 style="text-align: left;">Technical Skills</h4>
+            
+            <br>
+
+            <h5 class="art-text" style="text-align: left; font-weight: 800; color: #00BFFF;">Web & Mobile Development</h5>
+            
+            <span>
+              <p>🔹 Languages & Frameworks: PHP, JavaScript, Laravel, Vue.js, Dart, Flutter.</p>
+              <p>🔹 Backend (Laravel): API development, database management (MySQL),...</p>
+              <p>🔹 Frontend (Vue.js): Responsive UI, reusable components, state management (Vuex, Pinia), API integration.</p> 
+              <p>🔹 Mobile (Flutter): UI/UX design, state management, reusable components, Firebase services (Auth, Firestore, Push Notifications), SQLite.</p>
+              <p>🔹 Other: Git/GitHub, GitLab, Bitbucket, RESTful APIs, publishing apps to Google Play Store, clean & maintainable code.</p>
+            </span>
+
+            <h5 class="art-text" style="text-align: left; font-weight: 800; color: #00BFFF;">Game Development</h5>
+
+            <span>
+              <p>🔹 Game Engines: Flame (Flutter), Unreal Engine 5 (Blueprints & C++) - Currently learning.</p>
+              <p>🔹 Gameplay Programming:</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Hệ thống nhân vật, kẻ địch và boss: Mỗi thực thể có bộ thuộc tính riêng về sinh tồn, tấn công và phòng thủ, thay đổi theo cấp độ.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Character, Enemy & Boss Systems: Each entity has unique survival, attack, and defense attributes that scale with level.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Mở khóa & Nâng cấp nhân vật: Thiết kế cơ chế tiến trình cho phép mở khóa và phát triển nhân vật theo thời gian.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Character Unlock & Progression: Designed progression systems enabling character unlocks and upgrades over time.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Hành vi Thực thể: Xây dựng di chuyển theo kịch bản, logic tấn công và phòng thủ tùy tình huống.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Entity Behavior: Implemented scripted movement and situational attack/defense logic.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thay đổi thuộc tính chiến đấu: Thiết kế cơ chế tăng/giảm chỉ số chiến đấu khi nhận vật phẩm hoặc hiệu ứng tăng cường.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Combat Attribute Adjustment: Designed mechanics to modify stats through items or power-up effects.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Phần thưởng & Vật phẩm: Sắp xếp phần thưởng trong và sau trận đấu, vật phẩm nhặt được, cùng cơ chế thay đổi chỉ số từ item hoặc power-up.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Rewards & Items: Designed in-battle and post-battle rewards, collectible items, and stat-altering mechanics from items or power-ups.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Tối ưu Va chạm: Tối ưu hệ thống phát hiện va chạm với số lượng lớn thực thể trên màn hình.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Collision Optimization: Optimized collision detection for large numbers of on-screen entities.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Hệ thống Vũ khí: Phát triển đa dạng vũ khí cho nhân vật, kẻ địch và boss, xử lý tốc độ, hướng bắn và tác động lên mục tiêu.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Weapon System: Developed diverse weapons for characters, enemies, and bosses, handling speed, firing direction, and impact on targets.</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ ...</p>
+              
+              <p>🔹 Game Design & Scripting:</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Xây dựng Danh sách nhiệm vụ với kịch bản và độ khó tăng dần.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Quest System: Designed a mission list with progressive scenarios and increasing difficulty.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Lưu tiến trình và mở khóa nhiệm vụ sau khi hoàn thành nhiệm vu trước đó.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Progression System: Save player progress and unlock new missions after completing previous ones.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Xây dựng môi trường chiến đấu có chiều sâu và sinh động.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Combat Environments: Designed immersive and dynamic battlefields.</p>
+              
+              <p>🔹 UI/UX for Games:</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Hiển thị trực quan các chỉ số liên quan trong quá trình chơi game gồm chỉ số máu, giáp,...</p> -->
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ HUD Elements: Displayed key in-game stats such as health, armor, and related indicators.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cung cấp đầy đủ thông tin của các thành phần game thông qua văn bản, hình ảnh, các màn hình chính và phụ,...</p> -->
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Game UI/UX: Delivered comprehensive information of game elements through text, visuals, and both main and secondary screens.</p>
+              
+              <p>🔹 Audio & Visual Effects: Explosions, particle systems, lighting, dynamic sound effects, background music.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Âm thanh tấn công của các loại vũ khí, âm thanh vũ khí va chạm trúng đích, cảnh báo nguy hiểm, âm thanh phát nổ, âm thanh nhạc nền,...</p>  -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Audio Design: Weapon attack sounds, impact effects, danger alerts, explosions, and immersive background music.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Hình ảnh của hiệu ứng va chạm, hiệu ứng phát nổ, hiệu ứng đường di chuyển của vũ khí,...</p>  -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Visual Effects: Collision visuals, explosion effects, and weapon trajectory effects.</p>
+            
+            
+              <p>🔹 Game Systems:</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cửa hàng.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Shop.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thành tích.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Achievement.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Phần thưởng.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Reward.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thư viện tra cứu.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Library.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cài đặt.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Settings.</p>
+                
+              <p>🔹 Optimization: </p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Tối ưu hóa tải tài nguyên.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Optimizing asset loading.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Thực hiện các công việc nặng về xử lý bằng giải pháp đưa vào hàng đợi để xử lý tuần tự.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Handled heavy processing tasks by queuing for sequential execution.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Tối ưu code, tạo tham số một cách tối thiểu và giải phóng nhằm kiểm soát tốt bộ nhớ.</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Optimized code and managed memory by minimizing and releasing parameters efficiently.</p>
+                <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Kiểm soát tốt tốc độ khung hình, giúp game chạy mượt và ổn định,...</p> -->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ensured smooth and stable gameplay by optimizing and maintaining frame rate.</p>
+              
+              <p>🔹 Additional Skills: Debugging, unit testing, playtesting, Git version control, Agile workflow</p>
+              <p>🔹 Achievement: Independently designed and developed a combat game, demonstrating end-to-end skills from coding to design</p>
+            </span>
+
+            <br>
+
+            <h4 style="text-align: left;">Soft Skills</h4>
+            <span >
+              <p>- Strong problem-solving and analytical thinking.</p>
+              <p>- Quick learner, adaptable to new technologies.</p>
+              <p>- Team collaboration with designers, testers, and artists.</p> 
+              <p>- Creativity and passion for game design and player experience.</p>
+              <p>- Effective time management and independent work ability.</p>
+              </span>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4 class="titulo">Maya 3D</h4>
+
+                <div class="my-progress progress-striped">
+                  <div class="progress-bar-maya3d">
+                  </div>
+                </div> 
+                <br>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4>3DS Max</h4>
+
+                <div class="my-progress progress-striped">
+                  <div class="progress-bar-orther">
+                  </div>                       
+                </div>
+                <br>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="five-service-icon service-icon"></div>
+                <h4 class="titulo">Blender</h4>
+
+                <div class="my-progress progress-striped">
+                  <div class="progress-bar-blender">
+                  </div>
+                </div> 
+                <br>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4>After Effect</h4>
+
+                <div class="my-progress progress-striped">
+                  <div class="progress-bar-ae">
+                  </div>                       
+                </div>
+                <br>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4>Photoshop</h4>
+
+                <div class="my-progress progress-striped">
+                  <div class="progress-bar-photoshop">
+                  </div>                       
+                </div>
+                <br>
+
+              </div>
+            </div>
+            
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <div class="text-header" style="padding-bottom: 40px;">
+              <h2>Projects</h2>
+              <div class="line-dec"></div>
+            </div>
+            <b>- The high-speed combat game I'm working on -</b>
+	    <!-- <b>- (Below are the animations I have created for the company's projects) -</b> -->
+          </div>
+          <div class="row">
+            <div class="my-projects">
+
+              <div class="project-item">
+                <div class="project-image">
+                  <img
+                    src="https://i.pinimg.com/736x/87/45/ff/8745ff2b17030d307bf3a0d136b727c0.jpg"
+                    alt="sq-sample26"
+                  />
+                </div>
+                <div class="project-description">
+                  <div class="project-name"> 
+                    <h2 class="art-text">Màn hình chính</h2>
+                  </div>
+                  <div class="project-link">
+                    <a href="https://drive.google.com/file/d/1bEMUKRoaAm1oqziRDcMqTG2D5nV-kgN4/view?usp=sharing" target="_blank">
+                      <b>Click to view Project</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <div class="project-image">
+                  <img
+                    src="https://i.pinimg.com/736x/ef/f5/59/eff55918072041001cfb8feecab36969.jpg"
+                    alt="sq-sample26"
+                  />
+                </div>
+                <div class="project-description">
+                  <div class="project-name"> 
+                    <h2 class="art-text">Chọn Chiến đấu cơ</h2>
+                  </div>
+                  <div class="project-link">
+                    <a href="https://drive.google.com/file/d/1bEMUKRoaAm1oqziRDcMqTG2D5nV-kgN4/view?usp=sharing" target="_blank">
+                      <b>Click to view Project</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="project-item">
+                <div class="project-image">
+                  <img
+                      src="https://i.pinimg.com/736x/53/a6/b6/53a6b69c12d40d6f849c33a50168ec4a.jpg"
+                      alt="sq-sample26"
+                    />
+                </div>
+                <div class="project-description">
+                  <div class="project-name"> 
+                    <h2 class="art-text">Thông tin Chiến đấu cơ</h2>
+                  </div>
+                  <div class="project-link">
+                    <a href="https://drive.google.com/file/d/1bEMUKRoaAm1oqziRDcMqTG2D5nV-kgN4/view?usp=sharing" target="_blank">
+                      <b>Click to view Project</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <div class="project-image">
+                  <img
+                      src="https://i.pinimg.com/736x/ad/93/ff/ad93ffc2564dccdb70ffbcdf3874fd43.jpg"
+                      alt="sq-sample26"
+                    />
+                </div>
+                <div class="project-description">
+                  <div class="project-name"> 
+                    <h2 class="art-text">Chọn Nhiệm Vụ</h2>
+                  </div>
+                  <div class="project-link">
+                    <a href="https://drive.google.com/file/d/1bEMUKRoaAm1oqziRDcMqTG2D5nV-kgN4/view?usp=sharing" target="_blank">
+                      <b>Click to view Project</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact</h2>
+            <div class="line-dec"></div>
+            
+          </div>
+          <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3 phone-t">
+                        <b>Phone: 0355 796 956</b>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3 email-t">
+                        <b>Email: levantan15081998@gmail.com</b>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+    <!-- The Modal Titio -->
+    <div id="myModal-titipo" class="modal">
+      <span class="close">&times;</span>
+      <iframe id="i-titipo" class="modal-content" src="https://files.fm/f/78fmvwm73" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="caption-titipo" class="caption"></div>
+    </div>
+
+    <!-- The Modal Minifore -->
+    <div id="myModal-minifore" class="modal">
+      <span class="close">&times;</span>
+      <iframe id="i-minifore" class="modal-content" src="https://files.fm/f/spy2c4nhg" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="caption-minifore" class="caption"></div>
+    </div>
+
+    <!-- The Modal Jouju -->
+    <div id="myModal-jouju" class="modal">
+      <span class="close">&times;</span>
+      <iframe id="i-jouju" class="modal-content" src="https://files.fm/f/z69cwgtm7" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="caption-jouju" class="caption"></div>
+    </div>
+
+    <!-- The Modal Comi and Bebe -->
+    <div id="myModal-comi" class="modal">
+      <span class="close">&times;</span>
+      <iframe id="i-comi" class="modal-content" src="https://files.fm/f/zyjvpkrzk" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="caption-comi" class="caption"></div>
+    </div>
+
+    <!-- The Modal Training -->
+    <div id="myModal-training" class="modal">
+      <span class="close">&times;</span>
+      <iframe id="i-training" class="modal-content" src="https://files.fm/f/5hfdkb4ux" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="caption-training" class="caption"></div>
+    </div>
+    
+
+    <script>
+      // Get the modal
+      var modal_titipo = document.getElementById("myModal-titipo");
+      
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var titipo = document.getElementById("xem-titipo");
+
+      var i_titipo = document.getElementById("i-titipo");
+   
+      var captionText = document.getElementById("caption-titipo");
+      titipo.onclick = function(){
+        modal_titipo.style.display = "block";
+        modal_titipo.style.visibility = "visible";
+        captionText.innerHTML = "Titipo Project";
+      }
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close");
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() { 
+        modal_titipo.style.display = "none";
+        modal_titipo.style.visibility = "hidden";
+        i_titipo.setAttribute('src', i_titipo.getAttribute('src'));
+      }
+
+      modal_titipo.onclick = function() { 
+        modal_titipo.style.display = "none";
+        modal_titipo.style.visibility = "hidden";
+        i_titipo.setAttribute('src', i_titipo.getAttribute('src'));
+      }
+
+      
+    </script>
+
+<script>
+  // Get the modal
+  var modal_minifore = document.getElementById("myModal-minifore");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var minifore = document.getElementById("xem-minifore");
+
+  var i_minifore = document.getElementById("i-minifore");
+
+  var captionText = document.getElementById("caption-minifore");
+  minifore.onclick = function(){
+    modal_minifore.style.display = "block";
+    modal_minifore.style.visibility = "visible";
+    captionText.innerHTML = "Minifore Project";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close");
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal_minifore.style.display = "none";
+    modal_minifore.style.visibility = "hidden";
+    i_minifore.setAttribute('src', i_minifore.getAttribute('src'));
+  }
+
+  modal_minifore.onclick = function() { 
+    modal_minifore.style.display = "none";
+    modal_minifore.style.visibility = "hidden";
+    i_minifore.setAttribute('src', i_minifore.getAttribute('src'));
+  }
+
+  
+</script>
+
+<script>
+  // Get the modal
+  var modal_jouju = document.getElementById("myModal-jouju");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var jouju = document.getElementById("xem-jouju");
+
+  var i_jouju = document.getElementById("i-jouju");
+
+  var captionText = document.getElementById("caption-jouju");
+  jouju.onclick = function(){
+    modal_jouju.style.display = "block";
+    modal_jouju.style.visibility = "visible";
+    captionText.innerHTML = "Jouju Project";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close");
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal_jouju.style.display = "none";
+    modal_jouju.style.visibility = "hidden";
+    i_jouju.setAttribute('src', i_jouju.getAttribute('src'));
+  }
+
+  modal_jouju.onclick = function() { 
+    modal_jouju.style.display = "none";
+    modal_jouju.style.visibility = "hidden";
+    i_jouju.setAttribute('src', i_jouju.getAttribute('src'));
+  }
+
+  
+</script>
+
+<script>
+  // Get the modal
+  var modal_comi = document.getElementById("myModal-comi");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var comi = document.getElementById("xem-comi");
+
+  var i_comi = document.getElementById("i-comi");
+
+  var captionText = document.getElementById("caption-comi");
+  comi.onclick = function(){
+    modal_comi.style.display = "block";
+    modal_comi.style.visibility = "visible";
+    captionText.innerHTML = "Comi Project";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close");
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal_comi.style.display = "none";
+    modal_comi.style.visibility = "hidden";
+    i_comi.setAttribute('src', i_comi.getAttribute('src'));
+  }
+
+  modal_comi.onclick = function() { 
+    modal_comi.style.display = "none";
+    modal_comi.style.visibility = "hidden";
+    i_comi.setAttribute('src', i_comi.getAttribute('src'));
+  }
+
+  
+</script>
+
+<script>
+  // Get the modal
+  var modal_training = document.getElementById("myModal-training");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var training = document.getElementById("xem-training");
+
+  var i_training = document.getElementById("i-training");
+
+  var captionText = document.getElementById("caption-training");
+  training.onclick = function(){
+    modal_training.style.display = "block";
+    modal_training.style.visibility = "visible";
+    captionText.innerHTML = "Training Project";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close");
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal_training.style.display = "none";
+    modal_training.style.visibility = "hidden";
+    i_training.setAttribute('src', i_training.getAttribute('src'));
+  }
+
+  modal_training.onclick = function() { 
+    modal_training.style.display = "none";
+    modal_training.style.visibility = "hidden";
+    i_training.setAttribute('src', i_training.getAttribute('src'));
+  }
+
+
+  
+  
+</script>
+
+
+<!-- <script type="text/javascript" src="https://files.fm/embed/playerv2?hash=z69cwgtm7&autoplay=off&autoload=off&w=100%&h=auto&poster_src=https://files.fm/thumb_video_picture.php?i=z69cwgtm7" id="filesfm_embed_js__z69cwgtm7"></script> -->
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
     <title>Le Van Tien - CV</title>
 <!--
 Reflux Template
@@ -1057,3 +2204,4 @@ https://templatemo.com/tm-531-reflux
     </script>
   </body>
 </html>
+ -->
